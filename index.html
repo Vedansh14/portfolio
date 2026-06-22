@@ -4,146 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Portfolio
-    </title>
+    <title>Vedansh Tiwari — Portfolio</title>
+    <meta name="description" content="Portfolio of Vedansh Tiwari — BCA Student, Developer, and tech enthusiast passionate about AI, Java, and Python.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <nav class="navbar">
+    <!-- ===== Page Preloader — Infinity Zoom ===== -->
+    <div class="preloader" id="preloader">
+        <svg class="infinity-svg" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="infinity-path"
+                d="M100 50 C125 25, 160 25, 160 50 C160 75, 125 75, 100 50 C75 75, 40 75, 40 50 C40 25, 75 25, 100 50Z"
+                stroke="url(#infinityGradient)" stroke-width="3" stroke-linecap="round" />
+            <defs>
+                <linearGradient id="infinityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ff8c00" />
+                    <stop offset="50%" stop-color="#fbbf24" />
+                    <stop offset="100%" stop-color="#ff8c00" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <h1 class="logo"></h1>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#home" class="logo">VT<span class="logo-dot">.</span></a>
+
+            <!-- Hamburger toggle for mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- ===== Hero ===== -->
     <section id="home" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <h2>Hi, I'm <span class="highlight">Vedansh Tiwari</span></h2>
-                <p class="subtitle">BCA Student | Developer </p>
-                <p class="description">Passionate about creating innovative solutions and learning new technologies</p>
-                <div class="cta-buttons">
-                    <a href="Resume.docx" download class="btn btn-primary"><i class="fas fa-download"></i> Download
-                        Resume</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <p class="hero-greeting reveal">Hello, I'm</p>
+                <h1 class="hero-name reveal">Vedansh <span class="highlight">Tiwari</span></h1>
+                <p class="subtitle reveal">BCA Student · Developer</p>
+                <p class="description reveal">Passionate about creating innovative solutions and learning new
+                    technologies.</p>
+                <div class="cta-buttons reveal">
+                    <a href="Resume.docx" download class="btn btn-primary" id="download-resume">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="get-in-touch">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="Profile Photo.jpeg" alt="Vedansh Tiwari Profile Picture">
+            <div class="hero-image reveal">
+                <img src="Profile Photo.jpeg" alt="Vedansh Tiwari" loading="eager">
             </div>
         </div>
     </section>
 
+    <!-- ===== About ===== -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title reveal">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I’m Vedansh Tiwari, a BCA student at Amity University, Raipur, passionate about AI,
-                        JAVA, and Python. I learn through hands-on projects and hackathons, including SIH’25.</p>
+                <div class="about-text reveal">
+                    <p>I'm Vedansh Tiwari, a BCA student at Amity University, Raipur, passionate about AI,
+                        Java, and Python. I learn through hands-on projects and hackathons, including SIH'25.</p>
                     <div class="education">
-                        <h3>Education</h3>
+                        <div class="education-header">
+                            <i class="fas fa-graduation-cap education-icon"></i>
+                            <h3>Education</h3>
+                        </div>
                         <p><strong>Amity University, Chhattisgarh</strong></p>
                         <p>Bachelor's degree in Computer Applications</p>
                         <p>Currently in 2nd year</p>
-                        <!--<p>CGPA (1st year): 5.6/10</p> -->
                         <p>Expected Graduation: June 2027</p>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== Projects ===== -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title reveal">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Web Development </h3>
-                    <p>I developed a responsive website using PHP featuring multiple pages,
-                        interactive elements, and optimized performance for various devices and screen sizes.
-                    </p>
+                <div class="project-card reveal">
+                    <div class="project-card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Developed a responsive website using PHP featuring multiple pages,
+                        interactive elements, and optimized performance for various devices.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">Caesar Cipher Algorithm</span>
+                        <span class="tech-tag">Caesar Cipher</span>
                         <span class="tech-tag">GUI</span>
-
                     </div>
-                    <a href="#" class="https://github.com/nainasethia/CST_CS_T1.git">View Project →</a>
                 </div>
-                <div class="project-card">
+                <div class="project-card reveal">
+                    <div class="project-card-icon"><i class="fas fa-book-open"></i></div>
                     <h3>Course Management System</h3>
-                    <p>I created a Python-based Course Management System that encrypts and decrypts images using
-                        pixel swapping and arithmetic operations, featuring a user-friendly GUI for seamless interaction.
-                    </p>
+                    <p>A collaborative project that helps students manage course information, pending work,
+                        and guides them through their academic journey.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pixel Swapping</span>
-                        <span class="tech-tag">Arithmetic Operations</span>
-                        <span class="tech-tag">Image Processing</span>
                         <span class="tech-tag">Encryption</span>
                         <span class="tech-tag">Decryption</span>
-                        <span class="tech-tag">GUI</span>
-
                     </div>
-                    <a href="#" class="https://github.com/nainasethia/CST_CS_T2.git">View Project →</a>
                 </div>
-                <div class="project-card">
-                    <h3>App Devlopment </h3>
-                    <p>I developed a Java application that utilizes regular expressions to validate user inputs such as
-                        email addresses, phone numbers, and passwords, ensuring data integrity and enhancing user
-                        experience.
-                    </p>
+                <div class="project-card reveal">
+                    <div class="project-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>App Development</h3>
+                    <p>A Java application using regular expressions to validate emails, phone numbers, and
+                        passwords — ensuring data integrity and great UX.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Regular Expressions</span>
-
+                        <span class="tech-tag">Regex</span>
                     </div>
-                    <a href="#" class="https://github.com/nainasethia/CST_CS_T3.git">View Project →</a>
                 </div>
-                <!-- <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Web Development </h3>
-                    <p>I developed a responsive website using PHP featuring multiple pages,
-                        interactive elements, and optimized performance for various devices and screen sizes.
-                    </p>
+                <div class="project-card reveal">
+                    <div class="project-card-icon"><i class="fas fa-code"></i></div>
+                    <h3>PHP Website</h3>
+                    <p>A responsive multi-page website featuring interactive elements and optimized
+                        performance across different devices and screen sizes.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">Caesar Cipher Algorithm</span>
+                        <span class="tech-tag">CSS</span>
                         <span class="tech-tag">GUI</span>
-
                     </div>
-                    <a href="#" class="https://github.com/nainasethia/CST_CS_T1.git">View Project →</a>
-                </div> -->
-                
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== Skills ===== -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title reveal">Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>Coding Languages</h3>
                     <ul>
-                        <li>sql</li>
+                        <li>SQL</li>
                         <li>Python</li>
                         <li>Java</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
                     <h3>Tools</h3>
                     <ul>
                         <li>Git</li>
@@ -151,22 +174,25 @@
                         <li>Android Studio</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
                     <h3>Version Control</h3>
                     <ul>
                         <li>Git</li>
                         <li>GitHub</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Database</h3>
                     <ul>
                         <li>MySQL</li>
-                        <li>MySQLite</li>
+                        <li>SQLite</li>
                         <li>Firebase</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
                     <h3>Web Development</h3>
                     <ul>
                         <li>HTML</li>
@@ -175,17 +201,18 @@
                         <li>PHP</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-users"></i></div>
                     <h3>Soft Skills</h3>
                     <ul>
                         <li>Team Management</li>
                         <li>Decision Making</li>
-                        <li>Creative and Critical Thinking</li>
+                        <li>Creative Thinking</li>
                         <li>Problem Solving</li>
-
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-language"></i></div>
                     <h3>Languages</h3>
                     <ul>
                         <li>English</li>
@@ -196,134 +223,91 @@
         </div>
     </section>
 
+    <!-- ===== Achievements ===== -->
     <section id="achievements" class="achievements">
         <div class="container">
-            <h2 class="section-title">Achievements & Certifications</h2>
+            <h2 class="section-title reveal">Achievements & Certifications</h2>
             <div class="achievements-grid">
-                <div class="achievement-card">
-                    <i class="fas fa-certificate achievement-icon"></i>
-                    <h3>Ethical Hacking and Web Development</h3>
-                    <p class="achievement-date"> 2025</p>
-                    <a href="https://drive.google.com/file/d/15rkndME5xBwHyRjRXxEJcNmUzv3fFG_b/view?usp=drive_link" target="_blank">View Certificate →</a>
-                    <p>Completed foundational coursework in ethical hacking and web development</p>
-                    
+                <div class="achievement-card reveal">
+                    <i class="fas fa-shield-alt achievement-icon"></i>
+                    <h3>Ethical Hacking & Web Dev</h3>
+                    <p class="achievement-date">2025</p>
+                    <p>Completed foundational coursework in ethical hacking and web development.</p>
+                    <a href="https://drive.google.com/file/d/15rkndME5xBwHyRjRXxEJcNmUzv3fFG_b/view?usp=drive_link"
+                        target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> View
+                        Certificate</a>
                 </div>
-                <div class="achievement-card">
-                    img
-                    <i class="fas fa-certificate achievement-icon"></i>
-                    <h3>Android App Development with core Java</h3>
-                    <p class="achievement-date">Issued: January 2025</p>
-                    <p>Foundational understanding of Android app development and design</p>
+                <div class="achievement-card reveal">
+                    <i class="fab fa-android achievement-icon"></i>
+                    <h3>Android App Dev with Java</h3>
+                    <p class="achievement-date">January 2025</p>
+                    <p>Foundational understanding of Android app development and design.</p>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-certificate achievement-icon"></i>
-                    <h3>Smart India Hackathon Participant</h3>
-                    <p class="achievement-date">Smart India Hackathon 2025</p>
-                    <p>Participated in the national-level Smart India Hackathon, showcasing innovative ideas and teamwork skills</p>
+                <div class="achievement-card reveal">
+                    <i class="fas fa-trophy achievement-icon"></i>
+                    <h3>Smart India Hackathon</h3>
+                    <p class="achievement-date">SIH 2025</p>
+                    <p>Participated in the national-level Smart India Hackathon, showcasing innovative ideas and
+                        teamwork.</p>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-certificate achievement-icon"></i>
+                <div class="achievement-card reveal">
+                    <i class="fab fa-python achievement-icon"></i>
                     <h3>Python Basic</h3>
-                    <p class="achievement-date">Issued: 28 November 2025</p>
-                    <p>Foundational understanding of Python programming and its applications</p>
+                    <p class="achievement-date">November 2025</p>
+                    <p>Foundational understanding of Python programming and its applications.</p>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-certificate achievement-icon"></i>
-                    <h3>Database Management Certificate</h3>
+                <div class="achievement-card reveal">
+                    <i class="fas fa-database achievement-icon"></i>
+                    <h3>Database Management</h3>
                     <p class="achievement-date">Student Conference 2024</p>
-                    <p>Completed foundational coursework in database management and SQL</p>
+                    <p>Completed foundational coursework in database management and SQL.</p>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-certificate achievement-icon"></i>
-                    <h3>Summer Internship Certificate</h3>
-                    <p class="achievement-date">Issued: October 2024</p>
-                    <p>Completed a summer internship in Web Development, Ethical Hacking, And App Development</p>
-                </div>
-            </div>
-        </div>
-    </section>
-<!--
-    <section id="research" class="research">
-        <div class="container">
-            <h2 class="section-title">Research Papers</h2>
-            <div class="research-list">
-                <div class="research-paper">
-                    <div class="paper-header">
-                        <i class="fas fa-file-alt paper-icon"></i>
-                        <div class="paper-info">
-                            <h3>NA</h3>
-                            <p class="paper-authors">NA</p>
-                            <p class="paper-venue">NA</p>
-                        </div>
-                    </div>
-                    <p class="paper-abstract">This paper explores the application of machine learning algorithms in
-                        predicting patient outcomes and optimizing healthcare delivery systems.</p>
-                    <div class="paper-links">
-                        <a href="#" class="paper-link"><i class="fas fa-download"></i> PDF</a>
-                        <a href="#" class="paper-link"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-                <div class="research-paper">
-                    <div class="paper-header">
-                        <i class="fas fa-file-alt paper-icon"></i>
-                        <div class="paper-info">
-                            <h3>NA</h3>
-                            <p class="paper-authors">NA</p>
-                            <p class="paper-venue">NA</p>
-                        </div>
-                    </div>
-                    <p class="paper-abstract">NA</p>
-                    <div class="paper-links">
-                        
-                    </div>
-                </div>
-                <div class="research-paper">
-                    <div class="paper-header">
-                        <i class="fas fa-file-alt paper-icon"></i>
-                        <div class="paper-info">
-                            <h3>NA</h3>
-                            <p class="paper-authors">NA</p>
-                            <p class="paper-venue">NA</p>
-                        </div>
-                    </div>
-                    <p class="paper-abstract">NA</p>
-                </div>
-            </div>
-        </div>
-    </section>
--->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro">I'm always open to new opportunities and collaborations. Feel free to reach out!
-            </p>
-            <div class="contact-methods">
-                <div class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <h3>Email</h3>
-                    <p><a href="mailto:vedanshtiwari10@gmail.com">vedanshtiwari10@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin contact-icon"></i>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/vedansh-tiwari-393230334" target="_blank">🔗 LinkedIn</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github contact-icon"></i>
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/Vedansh14" target="_blank">🔗 GitHub</a></p>
+                <div class="achievement-card reveal">
+                    <i class="fas fa-briefcase achievement-icon"></i>
+                    <h3>Summer Internship</h3>
+                    <p class="achievement-date">October 2024</p>
+                    <p>Completed a summer internship in Web Development, Ethical Hacking, and App Development.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Get In Touch</h2>
+            <p class="contact-intro reveal">I'm always open to new opportunities and collaborations. Feel free to reach
+                out!</p>
+            <div class="contact-methods">
+                <a href="mailto:vedanshtiwari10@gmail.com" class="contact-item reveal" id="contact-email">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <h3>Email</h3>
+                    <p>vedanshtiwari10@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/vedansh-tiwari-393230334" target="_blank"
+                    class="contact-item reveal" id="contact-linkedin">
+                    <i class="fab fa-linkedin contact-icon"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me</p>
+                </a>
+                <a href="https://github.com/Vedansh14" target="_blank" class="contact-item reveal" id="contact-github">
+                    <i class="fab fa-github contact-icon"></i>
+                    <h3>GitHub</h3>
+                    <p>View my repos</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
     <footer>
         <div class="container">
             <div class="footer-social">
                 <a href="mailto:vedanshtiwari10@gmail.com" class="footer-icon" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/vedansh-tiwari-393230334" target="_blank" class="footer-icon" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/vedansh-tiwari-393230334" target="_blank" class="footer-icon"
+                    title="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/Vedansh14" target="_blank" class="footer-icon" title="GitHub">
@@ -333,6 +317,113 @@
             <p>&copy; 2025 Vedansh Tiwari. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- ===== Back to Top ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        // ---- Preloader (3s infinity → zoom into site) ----
+        window.addEventListener('load', () => {
+            const preloader = document.getElementById('preloader');
+
+            // Wait 3 seconds showing the infinity animation
+            setTimeout(() => {
+                preloader.classList.add('zoom');
+
+                // After zoom animation completes, remove preloader
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                    setTimeout(() => preloader.remove(), 100);
+                }, 800);
+            }, 3000);
+        });
+
+        // ---- Hamburger Menu ----
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const navLinkItems = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+
+        // Close menu when a link is clicked
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ---- Active Nav Link on Scroll ----
+        const sections = document.querySelectorAll('section[id]');
+
+        function highlightNav() {
+            const scrollY = window.scrollY + 120;
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const link = document.querySelector(`.nav-link[href="#${id}"]`);
+                if (link) {
+                    if (scrollY >= top && scrollY < top + height) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNav);
+        highlightNav();
+
+        // ---- Navbar Scroll Effect ----
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ---- Back to Top Button ----
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ---- Scroll Reveal (IntersectionObserver) ----
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ---- Stagger children inside grids ----
+        document.querySelectorAll('.projects-grid, .skills-grid, .achievements-grid, .contact-methods').forEach(grid => {
+            grid.querySelectorAll('.reveal').forEach((child, i) => {
+                child.style.transitionDelay = `${i * 0.08}s`;
+            });
+        });
+    </script>
 </body>
 
 </html>
